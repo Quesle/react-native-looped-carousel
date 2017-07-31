@@ -11,42 +11,42 @@ Based on [react-native framework](https://github.com/facebook/react-native/) by 
 ## Demo
 ![](http://spronin.github.io/img/react.gif)
 
-## Install
+## 安装
 
 ```sh
 npm install react-native-looped-carousel --save
 ```
 
-## Props
+## 属性
 
 Name | propType | default value | description
 --- | --- | --- | ---
-autoplay | boolean | true | enables auto animations
-delay | number | 4000 | number in milliseconds between auto animations
-currentPage | number | 0 | allows you to set initial page
-pageStyle | style | null | style for pages
+autoplay | boolean | true | 是否自动轮播
+delay | number | 4000 | 多少毫秒切换一次
+currentPage | number | 0 | 设置初始页
+pageStyle | style | null | 页面的样式
 contentContainerStyle | style | null | `contentContainerStyle` for the scrollView
-onAnimateNextPage | func | null | callback that is called with 0-based Id of the current page
-swipe | bool | true | motion control for Swipe
-**Pagination** | --- | --- | ---
-pageInfo | boolean | false | shows `{currentPage} / {totalNumberOfPages}` pill at the bottom
-pageInfoBackgroundColor | string | 'rgba(0, 0, 0, 0.25)' | background color for pageInfo
-pageInfoBottomContainerStyle | style | null | style for the pageInfo container
-pageInfoTextStyle | style | null | style for text in pageInfo
-pageInfoTextSeparator | string | ' / ' | separator for `{currentPage}` and `{totalNumberOfPages}`
-**Bullets** | --- | --- | ---
-bullets | bool | false | wether to show "bullets" at the bottom of the carousel
-bulletStyle | style | null | style for each bullet
+onAnimateNextPage | func | null | 切换轮播图时的回调方法
+swipe | bool | true | 是否允许手势滑动也换页面
+**分页** | --- | --- | ---
+pageInfo | boolean | false | 是否在底部显示`当前页面下标 / 页面个数` 
+pageInfoBackgroundColor | string | 'rgba(0, 0, 0, 0.25)' | 分页的背景色
+pageInfoBottomContainerStyle | style | null | pageInfo容器的样式
+pageInfoTextStyle | style | null | pageInfo中的文本样式
+pageInfoTextSeparator | string | ' / ' | 在 `当前页面下标` 和 `页面个数`之间的分隔符
+**小圆点** | --- | --- | ---
+bullets | bool | false | 是否在轮播的底部显示小圆点
+bulletStyle | style | null | bullet（小圆点）的样式
 bulletsContainerStyle | style | null | style for the bullets container
-chosenBulletStyle | stlye | null | style for the selected bullet
-**Arrows** | --- | --- | ---
-arrows | bool | false | wether to show navigation arrows for the carousel
-arrowsStyle | style | null | style for navigation arrows
-arrowsContainerStyle | style | null | style for the navigation arrows container
-leftArrowText | string / element | 'Left' | label / icon for left navigation arrow
+chosenBulletStyle | stlye | null | bullet的容器的样式
+**导航箭头** | --- | --- | ---
+arrows | bool | false | 是否显示轮播的导航箭头
+arrowsStyle | style | null | 导航箭头的样式
+arrowsContainerStyle | style | null | 导航箭头的容器样式
+leftArrowText | string / element | 'Left' | 左箭头的文字或图片
 rightArrowText | string / element | 'Right' | label / icon for right navigation arrow
 
-## Usage
+## 使用
 ```js
 import React, { Component } from 'react';
 import {
